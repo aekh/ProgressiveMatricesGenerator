@@ -18,9 +18,9 @@ abstract class Component {
 	public Component(Component c) {
 		this.size = c.size;
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param m Mutator to mutate the component with.
 	 */
 	public final void mutate(Mutator m, int count) {
@@ -28,9 +28,9 @@ abstract class Component {
 			m.mutate(this);
 		}
 	}
-	
+
 	/**
-	 * 
+	 *
 	 * @param m Mutator to demutate the component with.
 	 */
 	public final void demutate(Mutator m, int count) {

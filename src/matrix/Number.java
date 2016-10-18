@@ -8,14 +8,15 @@ package matrix;
  *
  */
 final class Number extends Component {
-	
-	/**
-	 * 
-	 */
+
 	public Number() {
 		super(0);
 	}
-	
+
+	public Number(int size) {
+		super(size);
+	}
+
 	public Number(Component c) {
 		super(c);
 	}

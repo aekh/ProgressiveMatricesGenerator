@@ -45,8 +45,8 @@ final class ProgressiveMatrix {
 	 * @param r Rule that mutator will follow
 	 */
 	public void demutate(Mutator m, Rule r) {
-		for (int el = 0; el < size; ++el) {
-			matrix.getElement(el).mutate(m, r.getEffect(el, size));
+		for (int el = 0; el < size*size; ++el) {
+			matrix.getElement(el).demutate(m, r.getEffect(el, size));
 		}
 	}
 	

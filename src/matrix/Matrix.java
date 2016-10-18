@@ -95,7 +95,15 @@ final class Matrix<Element extends Component>{
 			System.out.println();
 		}
 	}
-	
+
+    public void reflect(Axis axis) {
+
+    }
+
+    public void rotate() {
+
+    }
+
 	private int safeBounds(int index, int size) {
 		if (index < 0) {index += size;}
 		return index %= size;

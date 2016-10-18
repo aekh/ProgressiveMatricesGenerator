@@ -9,26 +9,26 @@ package matrix;
  */
 class RuleGeneric implements Rule {
 
-	private Direction dir;
+	private Axis dir;
 	
 	/**
 	 * 
-	 * @param direction Direction of rule
+	 * @param direction Axis of rule
 	 */
-	public RuleGeneric(Direction dir) {
+	public RuleGeneric(Axis dir) {
 		this.dir = dir;
 	}
 	
 	public RuleGeneric() {
-		this(Direction.Horizontal);
+		this(Axis.Horizontal);
 	}
 
 	@Override
 	public int getEffect(int index, int size) {
-		if (Direction.Horizontal == dir) {
+		if (Axis.Horizontal == dir) {
 			return index % size;
 		}
-		if (Direction.Vertical == dir) {
+		if (Axis.Vertical == dir) {
 			return index / size;
 		}
 		return 0;
@@ -37,14 +37,14 @@ class RuleGeneric implements Rule {
 	/**
 	 * @return the direction
 	 */
-	public Direction getDirection() {
+	public Axis getDirection() {
 		return dir;
 	}
 
 	/**
 	 * @param direction the direction to set
 	 */
-	public void setDirection(Direction dir) {
+	public void setDirection(Axis dir) {
 		this.dir = dir;
 	}
 
